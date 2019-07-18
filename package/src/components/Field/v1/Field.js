@@ -99,7 +99,7 @@ class Field extends Component {
 
   renderHelpText() {
     const { helpText } = this.props;
-    return <StyledHelpText>{helpText}</StyledHelpText>;
+    return <StyledHelpText>{t(helpText)}</StyledHelpText>;
   }
 
   render() {

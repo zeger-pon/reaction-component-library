@@ -153,8 +153,8 @@ class GuestForm extends Component {
         validator={validator}
         value={value}
       >
-        <Field name="email" label="Email Address" isRequired helpText={helpText}>
-          <TextInput id={emailInputId} isReadOnly={isSaving} name="email" placeholder="Email address"
+        <Field name="email" label={t('Email Address')} isRequired helpText={helpText}>
+          <TextInput id={emailInputId} isReadOnly={isSaving} name="email" placeholder={t('Email address')}
             type="email"
           />
           <ErrorsBlock names={["email"]} />

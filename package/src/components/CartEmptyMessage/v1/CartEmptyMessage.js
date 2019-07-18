@@ -61,9 +61,9 @@ class CartEmptyMessage extends Component {
 
     return (
       <Fragment>
-        <EmptyMessage>{messageText}</EmptyMessage>
+        <EmptyMessage>{t(messageText)}</EmptyMessage>
         <EmptyButton>
-          <Button actionType="important" onClick={this.handleOnClick}>{buttonText}</Button>
+          <Button actionType="important" onClick={this.handleOnClick}>{t(buttonText)}</Button>
         </EmptyButton>
       </Fragment>
     );

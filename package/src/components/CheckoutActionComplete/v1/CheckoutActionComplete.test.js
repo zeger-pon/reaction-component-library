@@ -11,7 +11,7 @@ test("basic snapshot", () => {
   const component = renderer.create((
     <CheckoutActionComplete
       components={mockComponents}
-      label="Shipping address"
+      label={t('Shipping address')}
       content={Address}
       onClickChangeButton={onClick}
       stepNumber={2}

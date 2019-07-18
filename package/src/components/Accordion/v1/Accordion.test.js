@@ -5,7 +5,7 @@ import mockComponents from "../../../tests/mockComponents";
 import Accordion from "./Accordion";
 
 test("basic snapshot", () => {
-  const component = renderer.create(<Accordion label="mock label" components={mockComponents} />);
+  const component = renderer.create(<Accordion label={t('mock label')} components={mockComponents} />);
 
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

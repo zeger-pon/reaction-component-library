@@ -6,7 +6,7 @@ import StripePaymentCheckoutAction from "./StripePaymentCheckoutAction";
 test("basic snapshot", () => {
   const component = renderer.create((
     <StripePaymentCheckoutAction
-      label="Payment Information"
+      label={t('Payment Information')}
       stepNumber={2}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}

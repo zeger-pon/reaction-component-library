@@ -163,7 +163,7 @@ class InlineAlert extends Component {
         {isDismissable ? (
           <StyledDismissButton
             type="button"
-            aria-label="close"
+            aria-label={t('close')}
             onClick={this.handleDismissClick}
             onKeyPress={this.handleDismissKeyPress}
           >

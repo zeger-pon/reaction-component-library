@@ -493,7 +493,7 @@ class TextInput extends Component {
           tabIndex={-1}
         >
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </TextareaClearButton>
       );
     }
@@ -502,7 +502,7 @@ class TextInput extends Component {
       <IconWrapper errors={errors} hasBeenValidated={hasBeenValidated} isTextarea={shouldAllowLineBreaks} value={value}>
         <ClearButton onClick={this.onClearValue} onFocus={this.onButtonFocus} onBlur={this.onButtonBlur} tabIndex={-1}>
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </ClearButton>
       </IconWrapper>
     );

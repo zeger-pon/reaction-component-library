@@ -133,11 +133,11 @@ class ExampleIOUPaymentForm extends Component {
         onSubmit={this.handleSubmit}
         ref={(formRef) => { this.form = formRef; }}
       >
-        <Field name="fullName" label="Full name" labelFor={fullNameInputId}>
+        <Field name="fullName" label={t('Full name')} labelFor={fullNameInputId}>
           <TextInput id={fullNameInputId} name="fullName" />
           <ErrorsBlock names={["fullName"]} />
         </Field>
-        <Field name="amount" label="Amount (optional)" labelFor={amountInputId}>
+        <Field name="amount" label={t('Amount (optional)')} labelFor={amountInputId}>
           <TextInput id={amountInputId} name="amount" />
           <ErrorsBlock names={["amount"]} />
         </Field>

@@ -51,7 +51,7 @@ test("basic snapshot", () => {
   const component = renderer.create((
     <FinalReviewCheckoutAction
       checkoutSummary={checkoutSummary}
-      label="Payment Information"
+      label={t('Payment Information')}
       stepNumber={4}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}

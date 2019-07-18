@@ -40,7 +40,7 @@ test("renders with props", () => {
     isReadOnly
     maxLength={20}
     name="test"
-    placeholder="PLACEHOLDER"
+    placeholder={t('PLACEHOLDER')}
     value="VALUE"
   />); // eslint-disable-line react/jsx-closing-bracket-location
 
@@ -62,7 +62,7 @@ test("renders textarea with props", () => {
     isReadOnly
     maxLength={20}
     name="test"
-    placeholder="PLACEHOLDER"
+    placeholder={t('PLACEHOLDER')}
     shouldAllowLineBreak
     value="VALUE"
   />); // eslint-disable-line react/jsx-closing-bracket-location

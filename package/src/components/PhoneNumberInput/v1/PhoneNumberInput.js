@@ -434,7 +434,7 @@ class PhoneNumberInput extends Component {
       <IconWrapper errors={errors} hasBeenValidated={hasBeenValidated} value={value}>
         <ClearButton onClick={this.onClearValue} onFocus={this.onButtonFocus} onBlur={this.onButtonBlur} tabIndex={-1}>
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </ClearButton>
       </IconWrapper>
     );

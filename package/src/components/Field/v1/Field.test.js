@@ -37,7 +37,7 @@ test("renders with no label", () => {
 
 test("renders with label", () => {
   const component = renderer.create( // eslint-disable-line function-paren-newline
-    <Field label="Foo">
+    <Field label={t('Foo')}>
       <p>Text above</p>
       <TextInput components={iconComponents} name="test" />
       <p>Text below</p>
@@ -76,7 +76,7 @@ test("renders with help text", () => {
 
 test("renders with other props", () => {
   const component = renderer.create( // eslint-disable-line function-paren-newline
-    <Field label="Foo" className="className" labelClassName="labelClassName" labelFor="labelFor">
+    <Field label={t('Foo" className="className" labelClassName="labelClassName" labelFor="labelFor')}>
       <p>Blah</p>
     </Field>,
   ); // eslint-disable-line function-paren-newline
@@ -92,7 +92,7 @@ test("adds 'has-error' class when there are errors", () => {
   ];
 
   const component = shallow( // eslint-disable-line function-paren-newline
-    <Field label="Foo" errors={errors}>
+    <Field label={t('Foo')} errors={errors}>
       <p>Blah</p>
     </Field>,
   ); // eslint-disable-line function-paren-newline
@@ -102,7 +102,7 @@ test("adds 'has-error' class when there are errors", () => {
 
 test("adds 'required' class when it is required", () => {
   const component = shallow( // eslint-disable-line function-paren-newline
-    <Field label="Foo" isRequired>
+    <Field label={t('Foo')} isRequired>
       <p>Blah</p>
     </Field>,
   ); // eslint-disable-line function-paren-newline
@@ -117,7 +117,7 @@ test("adds 'required' and 'has-error' classes when there should be both", () => 
   ];
 
   const component = shallow( // eslint-disable-line function-paren-newline
-    <Field label="Foo" isRequired errors={errors}>
+    <Field label={t('Foo')} isRequired errors={errors}>
       <p>Blah</p>
     </Field>,
   ); // eslint-disable-line function-paren-newline
@@ -132,7 +132,7 @@ test("adds 'required' and 'has-error' classes and keeps additional", () => {
   ];
 
   const component = shallow( // eslint-disable-line function-paren-newline
-    <Field label="Foo" isRequired errors={errors} className="customClass">
+    <Field label={t('Foo" isRequired errors={errors} className="customClass')}>
       <p>Blah</p>
     </Field>,
   ); // eslint-disable-line function-paren-newline

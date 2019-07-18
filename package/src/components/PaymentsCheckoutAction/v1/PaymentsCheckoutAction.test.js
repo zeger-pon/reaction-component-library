@@ -25,7 +25,7 @@ test("basic snapshot", () => {
   const component = renderer.create((
     <PaymentsCheckoutAction
       components={mockComponents}
-      label="Payment"
+      label={t('Payment')}
       paymentMethods={paymentMethods}
       stepNumber={3}
     />
@@ -52,7 +52,7 @@ test("snapshot with a partial payment", () => {
   const component = renderer.create((
     <PaymentsCheckoutAction
       components={mockComponents}
-      label="Payment"
+      label={t('Payment')}
       paymentMethods={paymentMethods}
       payments={payments}
       stepNumber={3}
@@ -74,7 +74,7 @@ test("snapshot with an alert", () => {
     <PaymentsCheckoutAction
       alert={alert}
       components={mockComponents}
-      label="Payment"
+      label={t('Payment')}
       paymentMethods={paymentMethods}
       stepNumber={3}
     />
@@ -88,7 +88,7 @@ test("renders a selectable list and the first method's input component", () => {
   const wrapper = mount((
     <ComponentsProvider value={realComponents}>
       <PaymentsCheckoutAction
-        label="Payment"
+        label={t('Payment')}
         paymentMethods={paymentMethods}
         stepNumber={3}
       />
@@ -103,7 +103,7 @@ test("does not render the SelectableList if there's only one method", () => {
   const wrapper = mount((
     <ComponentsProvider value={realComponents}>
       <PaymentsCheckoutAction
-        label="Payment"
+        label={t('Payment')}
         paymentMethods={[paymentMethods[0]]}
         stepNumber={3}
       />
@@ -117,7 +117,7 @@ test("does not render the AddressForm if the method doesn't need it", () => {
   const wrapper = mount((
     <ComponentsProvider value={realComponents}>
       <PaymentsCheckoutAction
-        label="Payment"
+        label={t('Payment')}
         paymentMethods={[{
           ...paymentMethods[0],
           shouldCollectBillingAddress: false

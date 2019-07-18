@@ -137,7 +137,7 @@ test("CheckoutAction with `complete` status and label override via props", () =>
         <CheckoutActionComplete
           components={mockComponents}
           content={Address}
-          label="Label override"
+          label={t('Label override')}
           onClickChangeButton={onClick}
         />
       }
