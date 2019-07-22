@@ -1,5 +1,5 @@
 {
-  "name": "@reactioncommerce/components",
+  "name": "@reactioncommerce/styleguide",
   "version": "0.1.0",
   "description": "Reaction Commerce Style Guide",
   "homepage": "https://github.com/reactioncommerce/reaction-component-library",
@@ -24,7 +24,8 @@
     "test": "jest package/src",
     "test:watch": "jest --watch package/src",
     "test:file": "jest --no-cache --watch --coverage=false",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "postinstall": "mkdir ../components && mv ./package/* ../components"
   },
   "eslintConfig": {
     "extends": [
