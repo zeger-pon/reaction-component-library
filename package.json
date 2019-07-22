@@ -24,8 +24,7 @@
     "test": "jest package/src",
     "test:watch": "jest --watch package/src",
     "test:file": "jest --no-cache --watch --coverage=false",
-    "snyk-protect": "snyk protect",
-    "postinstall": "mkdir ../components && mv ./package/src/components/* ../components"
+    "snyk-protect": "snyk protect"
   },
   "eslintConfig": {
     "extends": [
