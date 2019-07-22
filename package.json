@@ -1,5 +1,5 @@
 {
-  "name": "@reactioncommerce/styleguide",
+  "name": "@reactioncommerce/components",
   "version": "0.1.0",
   "description": "Reaction Commerce Style Guide",
   "homepage": "https://github.com/reactioncommerce/reaction-component-library",
@@ -91,6 +91,7 @@
   "dependencies": {
     "@babel/polyfill": "~7.2.5",
     "@reactioncommerce/components-context": "~1.2.0",
+    "jshint": "^2.10.2",
     "lodash": "4.17.14",
     "prop-types": "~15.6.2",
     "react": "~16.4.2",
