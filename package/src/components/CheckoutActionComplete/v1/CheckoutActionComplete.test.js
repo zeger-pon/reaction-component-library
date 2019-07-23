@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import CheckoutActionComplete from "./CheckoutActionComplete";
@@ -11,7 +12,7 @@ test("basic snapshot", () => {
   const component = renderer.create((
     <CheckoutActionComplete
       components={mockComponents}
-      label="Shipping address"
+      label={t('Shipping address')}
       content={Address}
       onClickChangeButton={onClick}
       stepNumber={2}

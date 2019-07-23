@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { addTypographyStyles } from "../../../utils";
@@ -35,4 +36,4 @@ class StockWarning extends Component {
   }
 }
 
-export default StockWarning;
+export default i18n.withTranslation()(StockWarning); // auto-add i18n

@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { withComponents } from "@reactioncommerce/components-context";
 import styled from "styled-components";
@@ -111,4 +112,4 @@ class StripePaymentInput extends Component {
   }
 }
 
-export default withComponents(StripePaymentInput);
+export default i18n.withTranslation()(withComponents(StripePaymentInput)); // auto-add i18n

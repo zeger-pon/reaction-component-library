@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import {
   CardNumberElement,
@@ -257,4 +258,4 @@ class StripeForm extends Component {
 // deployed app, and does not work anyway. Need to investigate why `withComponents`
 // works and does not cause errors but `withTheme` does not work. It is surely
 // something related to the iframes that Stripe uses.
-export default withComponents(withStripeElements(injectStripe(StripeForm)));
+export default i18n.withTranslation()(withComponents(withStripeElements(injectStripe(StripeForm)))); // auto-add i18n

@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { addressToString, applyTheme, addTypographyStyles, CustomPropTypes } from "../../../utils";
@@ -105,4 +106,4 @@ class Address extends Component {
   }
 }
 
-export default Address;
+export default i18n.withTranslation()(Address); // auto-add i18n

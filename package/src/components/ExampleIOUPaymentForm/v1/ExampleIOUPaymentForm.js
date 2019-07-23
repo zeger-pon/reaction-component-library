@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { Form } from "reacto-form";
 import { uniqueId } from "lodash";
@@ -133,11 +134,11 @@ class ExampleIOUPaymentForm extends Component {
         onSubmit={this.handleSubmit}
         ref={(formRef) => { this.form = formRef; }}
       >
-        <Field name="fullName" label="Full name" labelFor={fullNameInputId}>
+        <Field name="fullName" label={t('Full name')} labelFor={fullNameInputId}>
           <TextInput id={fullNameInputId} name="fullName" />
           <ErrorsBlock names={["fullName"]} />
         </Field>
-        <Field name="amount" label="Amount (optional)" labelFor={amountInputId}>
+        <Field name="amount" label={t('Amount (optional)')} labelFor={amountInputId}>
           <TextInput id={amountInputId} name="amount" />
           <ErrorsBlock names={["amount"]} />
         </Field>
@@ -146,4 +147,4 @@ class ExampleIOUPaymentForm extends Component {
   }
 }
 
-export default withComponents(ExampleIOUPaymentForm);
+export default i18n.withTranslation()(withComponents(ExampleIOUPaymentForm)); // auto-add i18n

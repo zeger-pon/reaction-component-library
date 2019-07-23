@@ -8,3 +8,4 @@ export { default as getPhoneNumberValidator } from "./getPhoneNumberValidator";
 export { default as withStripeElements } from "./withStripeElements";
 export { default as addressToString } from "./addressToString";
 export { default as formatMoney } from "./formatMoney";
+export { default as i18n } from "./i18n";

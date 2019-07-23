@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import uniqueId from "lodash.uniqueid";
 import styled from "styled-components";
@@ -195,4 +196,4 @@ class Checkbox extends Component {
   }
 }
 
-export default Checkbox;
+export default i18n.withTranslation()(Checkbox); // auto-add i18n

@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -320,4 +321,4 @@ class CheckoutActions extends Component {
   }
 }
 
-export default withComponents(CheckoutActions);
+export default i18n.withTranslation()(withComponents(CheckoutActions)); // auto-add i18n

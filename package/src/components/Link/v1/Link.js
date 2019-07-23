@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { preventAccidentalDoubleClick } from "../../../utils";
@@ -58,4 +59,4 @@ class Link extends Component {
   }
 }
 
-export default Link;
+export default i18n.withTranslation()(Link); // auto-add i18n

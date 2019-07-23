@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import uniqueId from "lodash.uniqueid";
@@ -245,4 +246,4 @@ class SelectableItem extends Component {
   }
 }
 
-export default withComponents(SelectableItem);
+export default i18n.withTranslation()(withComponents(SelectableItem)); // auto-add i18n

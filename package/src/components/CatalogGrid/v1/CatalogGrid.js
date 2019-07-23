@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { ContainerQuery } from "react-container-query";
 import styled from "styled-components";
@@ -166,4 +167,4 @@ class CatalogGrid extends Component {
   }
 }
 
-export default withComponents(CatalogGrid);
+export default i18n.withTranslation()(withComponents(CatalogGrid)); // auto-add i18n

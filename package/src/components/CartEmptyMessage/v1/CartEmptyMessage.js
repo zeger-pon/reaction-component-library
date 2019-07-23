@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -61,13 +62,13 @@ class CartEmptyMessage extends Component {
 
     return (
       <Fragment>
-        <EmptyMessage>{messageText}</EmptyMessage>
+        <EmptyMessage>{t(messageText)}</EmptyMessage>
         <EmptyButton>
-          <Button actionType="important" onClick={this.handleOnClick}>{buttonText}</Button>
+          <Button actionType="important" onClick={this.handleOnClick}>{t(buttonText)}</Button>
         </EmptyButton>
       </Fragment>
     );
   }
 }
 
-export default withComponents(CartEmptyMessage);
+export default i18n.withTranslation()(withComponents(CartEmptyMessage)); // auto-add i18n

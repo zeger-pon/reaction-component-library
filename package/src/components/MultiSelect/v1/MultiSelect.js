@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import isEqual from "lodash.isequal";
 import PropTypes from "prop-types";
-import ReactSelect from "react-select";
+import ReactSelect from "react-select"; // auto-add i18n 
+import i18n from "../../../utils";
 import { applyTheme, CustomPropTypes } from "../../../utils";
 
 // This is currently mostly to ensure that this stays above our code examples in the
@@ -635,4 +637,4 @@ class MultiSelect extends Component {
   }
 }
 
-export default MultiSelect;
+export default i18n.withTranslation()(MultiSelect); // auto-add i18n

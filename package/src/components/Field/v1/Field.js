@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import isEmpty from "lodash.isempty";
@@ -99,7 +100,7 @@ class Field extends Component {
 
   renderHelpText() {
     const { helpText } = this.props;
-    return <StyledHelpText>{helpText}</StyledHelpText>;
+    return <StyledHelpText>{t(helpText)}</StyledHelpText>;
   }
 
   render() {
@@ -114,4 +115,4 @@ class Field extends Component {
   }
 }
 
-export default Field;
+export default i18n.withTranslation()(Field); // auto-add i18n

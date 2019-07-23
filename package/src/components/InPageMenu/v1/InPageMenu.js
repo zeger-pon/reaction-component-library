@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -67,5 +68,5 @@ class InPageMenu extends Component {
   }
 }
 
-export default withComponents(InPageMenu);
+export default i18n.withTranslation()(withComponents(InPageMenu)); // auto-add i18n
 

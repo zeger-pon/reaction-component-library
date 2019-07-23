@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import FinalReviewCheckoutAction from "./FinalReviewCheckoutAction";
@@ -51,7 +52,7 @@ test("basic snapshot", () => {
   const component = renderer.create((
     <FinalReviewCheckoutAction
       checkoutSummary={checkoutSummary}
-      label="Payment Information"
+      label={t('Payment Information')}
       stepNumber={4}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}

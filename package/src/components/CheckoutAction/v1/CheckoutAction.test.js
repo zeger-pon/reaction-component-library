@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import CheckoutActionComplete from "../../CheckoutActionComplete/v1";
@@ -137,7 +138,7 @@ test("CheckoutAction with `complete` status and label override via props", () =>
         <CheckoutActionComplete
           components={mockComponents}
           content={Address}
-          label="Label override"
+          label={t('Label override')}
           onClickChangeButton={onClick}
         />
       }

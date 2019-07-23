@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -434,7 +435,7 @@ class PhoneNumberInput extends Component {
       <IconWrapper errors={errors} hasBeenValidated={hasBeenValidated} value={value}>
         <ClearButton onClick={this.onClearValue} onFocus={this.onButtonFocus} onBlur={this.onButtonBlur} tabIndex={-1}>
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </ClearButton>
       </IconWrapper>
     );
@@ -508,4 +509,4 @@ class PhoneNumberInput extends Component {
   }
 }
 
-export default withComponents(PhoneNumberInput);
+export default i18n.withTranslation()(withComponents(PhoneNumberInput)); // auto-add i18n

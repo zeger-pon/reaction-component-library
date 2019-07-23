@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import isEqual from "lodash.isequal";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -290,4 +291,4 @@ class AddressCapture extends Component {
   }
 }
 
-export default withComponents(AddressCapture);
+export default i18n.withTranslation()(withComponents(AddressCapture)); // auto-add i18n

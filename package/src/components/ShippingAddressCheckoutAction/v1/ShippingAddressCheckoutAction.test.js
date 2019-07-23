@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import ShippingAddressCheckoutAction from "./ShippingAddressCheckoutAction";
@@ -7,7 +8,7 @@ test("basic snapshot with empty address", () => {
   /* eslint-disable */
   const component = renderer.create(
     <ShippingAddressCheckoutAction
-      label="Shipping Address"
+      label={t('Shipping Address')}
       stepNumber={1}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}
@@ -35,7 +36,7 @@ test("basic snapshot with address", () => {
   /* eslint-disable */
   const component = renderer.create(
     <ShippingAddressCheckoutAction
-      label="Shipping Address"
+      label={t('Shipping Address')}
       stepNumber={1}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}

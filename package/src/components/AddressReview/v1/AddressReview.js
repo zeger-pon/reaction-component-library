@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import uniqueId from "lodash.uniqueid";
 import { Form } from "reacto-form";
@@ -193,4 +194,4 @@ class AddressReview extends Component {
   }
 }
 
-export default withComponents(AddressReview);
+export default i18n.withTranslation()(withComponents(AddressReview)); // auto-add i18n

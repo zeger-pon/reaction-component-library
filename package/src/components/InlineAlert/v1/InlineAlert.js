@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -163,7 +164,7 @@ class InlineAlert extends Component {
         {isDismissable ? (
           <StyledDismissButton
             type="button"
-            aria-label="close"
+            aria-label={t('close')}
             onClick={this.handleDismissClick}
             onKeyPress={this.handleDismissKeyPress}
           >
@@ -176,4 +177,4 @@ class InlineAlert extends Component {
   }
 }
 
-export default withComponents(InlineAlert);
+export default i18n.withTranslation()(withComponents(InlineAlert)); // auto-add i18n

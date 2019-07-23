@@ -1,5 +1,6 @@
 /* eslint-disable require-jsdoc  */
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import { testInput } from "composable-form-tests";
@@ -40,7 +41,7 @@ test("renders with props", () => {
     isReadOnly
     maxLength={20}
     name="test"
-    placeholder="PLACEHOLDER"
+    placeholder={t('PLACEHOLDER')}
     value="VALUE"
   />); // eslint-disable-line react/jsx-closing-bracket-location
 
@@ -62,7 +63,7 @@ test("renders textarea with props", () => {
     isReadOnly
     maxLength={20}
     name="test"
-    placeholder="PLACEHOLDER"
+    placeholder={t('PLACEHOLDER')}
     shouldAllowLineBreak
     value="VALUE"
   />); // eslint-disable-line react/jsx-closing-bracket-location

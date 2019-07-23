@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -301,4 +302,4 @@ class AccordionFormList extends Component {
   }
 }
 
-export default withComponents(AccordionFormList);
+export default i18n.withTranslation()(withComponents(AccordionFormList)); // auto-add i18n

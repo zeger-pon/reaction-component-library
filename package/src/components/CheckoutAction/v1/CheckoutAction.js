@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { applyTheme } from "../../../utils";
@@ -104,4 +105,4 @@ class CheckoutAction extends Component {
   }
 }
 
-export default CheckoutAction;
+export default i18n.withTranslation()(CheckoutAction); // auto-add i18n

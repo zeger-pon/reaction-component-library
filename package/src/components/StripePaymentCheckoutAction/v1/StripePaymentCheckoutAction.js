@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { withComponents } from "@reactioncommerce/components-context";
 import Fade from "@material-ui/core/Fade";
@@ -258,4 +259,4 @@ class StripePaymentCheckoutAction extends Component {
   }
 }
 
-export default withComponents(StripePaymentCheckoutAction);
+export default i18n.withTranslation()(withComponents(StripePaymentCheckoutAction)); // auto-add i18n

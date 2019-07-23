@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import isEqual from "lodash.isequal";
 import PropTypes from "prop-types";
-import ReactSelect from "react-select";
+import ReactSelect from "react-select"; // auto-add i18n 
+import i18n from "../../../utils";
 import { applyTheme, CustomPropTypes } from "../../../utils";
 
 // This is currently mostly to ensure that this stays above our code examples in the
@@ -609,4 +611,4 @@ class Select extends Component {
   }
 }
 
-export default Select;
+export default i18n.withTranslation()(Select); // auto-add i18n

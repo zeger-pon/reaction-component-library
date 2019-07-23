@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
@@ -160,4 +161,4 @@ class QuantityInput extends Component {
   }
 }
 
-export default withStyles(styles)(QuantityInput);
+export default i18n.withTranslation()(withStyles(styles)(QuantityInput)); // auto-add i18n

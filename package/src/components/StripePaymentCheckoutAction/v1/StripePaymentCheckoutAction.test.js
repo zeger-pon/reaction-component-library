@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import StripePaymentCheckoutAction from "./StripePaymentCheckoutAction";
@@ -6,7 +7,7 @@ import StripePaymentCheckoutAction from "./StripePaymentCheckoutAction";
 test("basic snapshot", () => {
   const component = renderer.create((
     <StripePaymentCheckoutAction
-      label="Payment Information"
+      label={t('Payment Information')}
       stepNumber={2}
       onReadyForSaveChange={() => true}
       onSubmit={() => true}

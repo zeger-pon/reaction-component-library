@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import uniqueId from "lodash.uniqueid";
 import isEmpty from "lodash.isempty";
@@ -301,7 +302,7 @@ class AddressForm extends Component {
         <Grid>
           {shouldShowAddressNameField && (
             <ColFull>
-              <Field name="addressName" label="Address Name" labelFor={addressNameInputId} isOptional>
+              <Field name="addressName" label={t('Address Name')} labelFor={addressNameInputId} isOptional>
                 <TextInput
                   id={addressNameInputId}
                   name="addressName"
@@ -314,7 +315,7 @@ class AddressForm extends Component {
           )}
 
           <ColFull>
-            <Field name="country" label="Country" labelFor={countryInputId} isRequired>
+            <Field name="country" label={t('Country')} labelFor={countryInputId} isRequired>
               {this.countryOptions && this.countryOptions.length > 1 ? (
                 <Select
                   id={countryInputId}
@@ -323,7 +324,7 @@ class AddressForm extends Component {
                   name="country"
                   onChange={this.handleCountryChange}
                   options={this.countryOptions}
-                  placeholder="Country"
+                  placeholder={t('Country')}
                   isOnDarkBackground={isOnDarkBackground}
                   isReadOnly={isSaving || isReadOnly}
                 />
@@ -331,7 +332,7 @@ class AddressForm extends Component {
                 <TextInput
                   id={countryInputId}
                   name="country"
-                  placeholder="Country"
+                  placeholder={t('Country')}
                   isOnDarkBackground={isOnDarkBackground}
                   isReadOnly={isSaving || isReadOnly}
                 />
@@ -341,11 +342,11 @@ class AddressForm extends Component {
           </ColFull>
 
           <ColFull>
-            <Field name="fullName" label="Name" labelFor={fullNameInputId} isRequired>
+            <Field name="fullName" label={t('Name')} labelFor={fullNameInputId} isRequired>
               <TextInput
                 id={fullNameInputId}
                 name="fullName"
-                placeholder="Name"
+                placeholder={t('Name')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -354,11 +355,11 @@ class AddressForm extends Component {
           </ColFull>
 
           <ColFull>
-            <Field name="address1" label="Address" labelFor={address1InputId} isRequired>
+            <Field name="address1" label={t('Address')} labelFor={address1InputId} isRequired>
               <TextInput
                 id={address1InputId}
                 name="address1"
-                placeholder="Address"
+                placeholder={t('Address')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -367,11 +368,11 @@ class AddressForm extends Component {
           </ColFull>
 
           <ColFull>
-            <Field name="address2" label="Address Line 2" labelFor={address2InputId} isOptional>
+            <Field name="address2" label={t('Address Line 2')} labelFor={address2InputId} isOptional>
               <TextInput
                 id={address2InputId}
                 name="address2"
-                placeholder="Address Line 2 (Optional)"
+                placeholder={t('Address Line 2 (Optional)')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -379,11 +380,11 @@ class AddressForm extends Component {
           </ColFull>
 
           <ColFull>
-            <Field name="city" label="City" labelFor={cityInputId}>
+            <Field name="city" label={t('City')} labelFor={cityInputId}>
               <TextInput
                 id={cityInputId}
                 name="city"
-                placeholder="City"
+                placeholder={t('City')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -392,24 +393,24 @@ class AddressForm extends Component {
           </ColFull>
 
           <ColHalf>
-            <Field name="region" label="Region" labelFor={regionInputId} isRequired>
+            <Field name="region" label={t('Region')} labelFor={regionInputId} isRequired>
               <RegionInput
                 id={regionInputId}
                 options={this.regionOptions}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
                 name="region"
-                placeholder="Region"
+                placeholder={t('Region')}
               />
               <ErrorsBlock names={["region"]} />
             </Field>
           </ColHalf>
           <ColHalf>
-            <Field name="postal" label="Postal Code" labelFor={postalInputId} isRequired>
+            <Field name="postal" label={t('Postal Code')} labelFor={postalInputId} isRequired>
               <TextInput
                 id={postalInputId}
                 name="postal"
-                placeholder="Postal Code"
+                placeholder={t('Postal Code')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -418,11 +419,11 @@ class AddressForm extends Component {
           </ColHalf>
 
           <ColFull>
-            <Field name="phone" label="Phone" labelFor={phoneInputId} isRequired>
+            <Field name="phone" label={t('Phone')} labelFor={phoneInputId} isRequired>
               <PhoneNumberInput
                 id={phoneInputId}
                 name="phone"
-                placeholder="Phone"
+                placeholder={t('Phone')}
                 isOnDarkBackground={isOnDarkBackground}
                 isReadOnly={isSaving || isReadOnly}
               />
@@ -436,7 +437,7 @@ class AddressForm extends Component {
                 <Checkbox
                   id={isCommercialInputId}
                   name="isCommercial"
-                  label="This is a commercial address."
+                  label={t('This is a commercial address.')}
                   isOnDarkBackground={isOnDarkBackground}
                   isReadOnly={isSaving || isReadOnly}
                 />
@@ -449,4 +450,4 @@ class AddressForm extends Component {
   }
 }
 
-export default withComponents(AddressForm);
+export default i18n.withTranslation()(withComponents(AddressForm)); // auto-add i18n

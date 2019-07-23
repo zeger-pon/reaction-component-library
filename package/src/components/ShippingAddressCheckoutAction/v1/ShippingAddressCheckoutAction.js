@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import isEqual from "lodash.isequal";
@@ -247,4 +248,4 @@ class ShippingAddressCheckoutAction extends Component {
   }
 }
 
-export default withComponents(ShippingAddressCheckoutAction);
+export default i18n.withTranslation()(withComponents(ShippingAddressCheckoutAction)); // auto-add i18n

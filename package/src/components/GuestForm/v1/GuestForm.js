@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import uniqueId from "lodash.uniqueid";
@@ -153,8 +154,8 @@ class GuestForm extends Component {
         validator={validator}
         value={value}
       >
-        <Field name="email" label="Email Address" isRequired helpText={helpText}>
-          <TextInput id={emailInputId} isReadOnly={isSaving} name="email" placeholder="Email address"
+        <Field name="email" label={t('Email Address')} isRequired helpText={helpText}>
+          <TextInput id={emailInputId} isReadOnly={isSaving} name="email" placeholder={t('Email address')}
             type="email"
           />
           <ErrorsBlock names={["email"]} />
@@ -175,4 +176,4 @@ class GuestForm extends Component {
   }
 }
 
-export default withComponents(GuestForm);
+export default i18n.withTranslation()(withComponents(GuestForm)); // auto-add i18n

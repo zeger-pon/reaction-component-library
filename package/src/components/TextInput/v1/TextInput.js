@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withComponents } from "@reactioncommerce/components-context";
@@ -493,7 +494,7 @@ class TextInput extends Component {
           tabIndex={-1}
         >
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </TextareaClearButton>
       );
     }
@@ -502,7 +503,7 @@ class TextInput extends Component {
       <IconWrapper errors={errors} hasBeenValidated={hasBeenValidated} isTextarea={shouldAllowLineBreaks} value={value}>
         <ClearButton onClick={this.onClearValue} onFocus={this.onButtonFocus} onBlur={this.onButtonBlur} tabIndex={-1}>
           {iconClear}
-          <span>{iconClearAccessibilityText}</span>
+          <span>{t(iconClearAccessibilityText)}</span>
         </ClearButton>
       </IconWrapper>
     );
@@ -621,4 +622,4 @@ class TextInput extends Component {
   }
 }
 
-export default withComponents(TextInput);
+export default i18n.withTranslation()(withComponents(TextInput)); // auto-add i18n

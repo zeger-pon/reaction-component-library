@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import renderer from "react-test-renderer";
 import mockComponents from "../../../tests/mockComponents";
 import FulfillmentOptionsCheckoutAction from "./FulfillmentOptionsCheckoutAction";
@@ -54,7 +55,7 @@ test("basic snapshot", () => {
 
 
   /* eslint-disable */
-  const component = renderer.create(<FulfillmentOptionsCheckoutAction components={mockComponents} stepNumber={2} label="Choose a shipping method" fulfillmentGroup={fulfillmentGroup} />);
+  const component = renderer.create(<FulfillmentOptionsCheckoutAction components={mockComponents} stepNumber={2} label={t('Choose a shipping method')} fulfillmentGroup={fulfillmentGroup} />);
   /* eslint-enable */
 
   const tree = component.toJSON();
@@ -67,7 +68,7 @@ test("basic snapshot - empty fulfillment options", () => {
   };
 
   /* eslint-disable */
-  const component = renderer.create(<FulfillmentOptionsCheckoutAction components={mockComponents} stepNumber={2} label="Choose a shipping method" fulfillmentGroup={fulfillmentGroup} />);
+  const component = renderer.create(<FulfillmentOptionsCheckoutAction components={mockComponents} stepNumber={2} label={t('Choose a shipping method')} fulfillmentGroup={fulfillmentGroup} />);
   /* eslint-enable */
 
   const tree = component.toJSON();

@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import { withComponents } from "@reactioncommerce/components-context";
 import { CustomPropTypes } from "../../../utils";
@@ -80,4 +81,4 @@ class RegionInput extends Component {
   }
 }
 
-export default withComponents(RegionInput);
+export default i18n.withTranslation()(withComponents(RegionInput)); // auto-add i18n

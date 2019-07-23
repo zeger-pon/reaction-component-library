@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // auto-add i18n 
+import i18n from "../../../utils";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import isEmpty from "lodash.isempty";
@@ -98,4 +99,4 @@ class ErrorsBlock extends Component {
   }
 }
 
-export default withComponents(ErrorsBlock);
+export default i18n.withTranslation()(withComponents(ErrorsBlock)); // auto-add i18n
